@@ -35,7 +35,7 @@ func main() {
 	}
 	defer cli.Close()
 
-	err = cli.Upload("a.txt", "/root/b.txt")
+	err = cli.Upload("a.txt", "b.txt")
 	if err != nil {
 		log.Fatalln(err)
 	}
