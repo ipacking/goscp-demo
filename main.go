@@ -9,7 +9,7 @@ import (
 
 var (
 	addr     = "192.144.238.254:22"
-	user     = "ubuntu"
+	user     = "root"
 	password = "xxx"
 )
 
@@ -35,12 +35,12 @@ func main() {
 	}
 	defer cli.Close()
 
-	err = cli.Upload("a.txt", "/home/ubuntu/b.txt")
+	err = cli.Upload("a.txt", "/root/b.txt")
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	err = cli.Download("/home/ubuntu/b.txt", "./")
+	err = cli.Download("/root/b.txt", ".")
 	if err != nil {
 		log.Fatalln(err)
 	}
