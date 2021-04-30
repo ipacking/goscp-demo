@@ -9,7 +9,7 @@ import (
 
 var (
 	addr     = "192.144.238.254:22"
-	user     = "root"
+	username = "root"
 	password = "xxx"
 )
 
@@ -20,7 +20,7 @@ func init() {
 func main() {
 	conf := &ssh.ClientConfig{
 		Config: ssh.Config{},
-		User:   user,
+		User:   username,
 		Auth: []ssh.AuthMethod{
 			ssh.Password(password),
 		},
