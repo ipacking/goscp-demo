@@ -18,7 +18,7 @@ func init() {
 }
 
 func main() {
-	cfg := &ssh.ClientConfig{
+	conf := &ssh.ClientConfig{
 		Config: ssh.Config{},
 		User:   user,
 		Auth: []ssh.AuthMethod{
@@ -29,18 +29,18 @@ func main() {
 		},
 	}
 
-	client, err := scp.New(addr, cfg)
+	cli, err := scp.New(addr, conf)
 	if err != nil {
 		log.Println(err)
 	}
-	defer client.Close()
+	defer cli.Close()
 
-	err = client.Upload("a.txt", "/home/ubuntu/b.txt")
+	err = cli.Upload("a.txt", "/home/ubuntu/b.txt")
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	err = client.Download("/home/ubuntu/b.txt", "./")
+	err = cli.Download("/home/ubuntu/b.txt", "./")
 	if err != nil {
 		log.Fatalln(err)
 	}
