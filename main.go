@@ -1,14 +1,14 @@
 package main
 
 import (
-	"goscp-demo/util/scp"
-	"goscp-demo/util/ssh"
+	"goscp-demo/utils/scp"
+	"goscp-demo/utils/ssh"
 	"log"
 )
 
 var (
 	username = "root"
-	password = "xxx"
+	password = "Ighost@2019"
 	host     = "118.24.12.180"
 	port     = 22
 )
