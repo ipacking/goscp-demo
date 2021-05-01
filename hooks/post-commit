@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "run post-commit task"
+echo "running post-commit task"
 # put this file in .git/hooks
 # put task file(hook) in project root
 ./hook
