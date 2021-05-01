@@ -8,7 +8,7 @@ import (
 
 var (
 	username = "root"
-	password = "Ighost@2019"
+	password = "xxx"
 	host     = "118.24.12.180"
 	port     = 22
 )
