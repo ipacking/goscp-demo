@@ -1,8 +1,8 @@
 package main
 
 import (
-	"goscp-demo/utils/scp"
-	"goscp-demo/utils/ssh"
+	"goscp-demo/tools/scp"
+	"goscp-demo/tools/ssh"
 	"log"
 )
 
